@@ -1,5 +1,5 @@
 #web services configuration file
-description: 'Call current weather data for one location by city name'
+description: 'Send a message to a Flow'
 provider: https://www.flowdock.com
 endpoint:
     url: https://api.flowdock.com/flows/__organization__/__flow__/messages
