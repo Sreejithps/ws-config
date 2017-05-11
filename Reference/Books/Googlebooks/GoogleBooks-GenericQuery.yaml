@@ -1,5 +1,5 @@
 #web services configuration file
-description: 'Call current weather data for one location by city name'
+description: 'Do a book search on Google books'
 provider: https://www.googleapis.com/books
 providerapiversion: v1
 version: 'cb45c0ca-2b10-11e7-b154-d8fc93e70d32'
@@ -20,11 +20,13 @@ inputmap:
         encode: true
         encodingscheme: urlencode
         querystring: q
+        description:  Query string
     maxresults:
         target: querystring
         encode: false
         querystring: maxResults
         default: 1
+        description:  Maximum number of results
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
@@ -40,6 +42,7 @@ authentication:
 #API parameters
 params:
     apikey:
+    description:  API Key for accessig the services
 #output configuration
 outputmap:
     titleauthor:
