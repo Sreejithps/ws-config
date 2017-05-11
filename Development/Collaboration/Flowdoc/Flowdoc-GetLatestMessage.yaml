@@ -62,8 +62,6 @@ authentication:
 params:
     apikey:
 #target:querystring, header
-        target: querystring
-        querystring: q
         description:  API Key for accessig the services
 #output configuration
 outputmap:

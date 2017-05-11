@@ -24,7 +24,7 @@ authentication:
 #API parameters
 params:
     apikey:
-
+        description: API key for accessing services
 #input paramaters
 inputmap:
     city:
@@ -32,16 +32,19 @@ inputmap:
         target: querystring
         encode: true
         encodingscheme: urlencode
-        querystring: q               
-#output configuration
+        querystring: q
+        description: Name of the city to get weather information for
+        
 outputmap:
     temperature:
         transform: none 
         source: body
         type: json
         value: $.main.temp
+        description: Temperature
     pressure:
         transform: none 
         source: body
         type: json
         value: $.main.pressure
+        description: Pressure

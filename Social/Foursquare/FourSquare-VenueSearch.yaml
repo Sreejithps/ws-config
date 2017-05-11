@@ -1,8 +1,6 @@
 #web services configuration file
 description: 'Search for Foursquare venue'
 provider: https://www.googleapis.com
-providerapiversion: 20170101
-version: 'cb45c0ca-2b10-11e7-b154-d8fc93e70d32'
 endpoint:
     url: https://api.foursquare.com/v2/venues/search?v=20170101
 #rest, soap
@@ -45,7 +43,9 @@ authentication:
 params:
 #output configuration
     clientid:
+        description: Client ID
     clientsecret:
+        description: Client secret
 outputmap:
     venue:
         transform: strfmt

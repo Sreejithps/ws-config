@@ -42,7 +42,7 @@ authentication:
 #API parameters
 params:
     apikey:
-    description:  API Key for accessig the services
+        description:  API Key for accessig the services
 #output configuration
 outputmap:
     titleauthor:
@@ -51,3 +51,4 @@ outputmap:
         type: json
         format: '{} by {}'
         value: ['$.items[*].volumeInfo.title', '$.items[*].volumeInfo.authors[0]']
+        description: Formatted title
