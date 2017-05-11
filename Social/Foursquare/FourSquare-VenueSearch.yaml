@@ -15,11 +15,13 @@ inputmap:
         encode: true
         encodingscheme: urlencode
         querystring: near
+        description: Location name
     limit:
         target: querystring
         encode: false
         default: 50
         querystring: limit
+        description: Number of locations to reurn
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
