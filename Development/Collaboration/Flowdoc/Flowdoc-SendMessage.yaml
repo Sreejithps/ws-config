@@ -14,21 +14,26 @@ endpoint:
 #input paramaters
 inputmap:
     organization:
+        description:  Flow doc organization name
 #target:querystring, header, body, url
         target: url
         encode: true
         encodingscheme: urlencode
         urlpart: __organization__
     flowname:
+        description:  Flow name
         target: url
         encode: true
         encodingscheme: urlencode
         urlpart: __flow__
     event:
+        description:  Type of flowdoc event.
         target: body
+        default: message
         format: jsondict
         key: event             
     content:
+        description: Content of the message
         target: body
         format: jsondict
         key: content
@@ -51,6 +56,7 @@ params:
     apikey:
 #target:querystring, header
         target: querystring
+        description:  API Key for accessig the services
         querystring: q
 #output configuration
 outputmap:
@@ -59,3 +65,4 @@ outputmap:
         source: body
         type: json
         value: $.id
+        description:  ID of the new message

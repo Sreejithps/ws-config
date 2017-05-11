@@ -13,21 +13,25 @@ endpoint:
 #input paramaters
 inputmap:
     organization:
+        description: Flowdoc organization
 #target:querystring, header, body, url
         target: url
         encode: true
         encodingscheme: urlencode
         urlpart: __organization__
     oldflowname:
+        description: Name of Flow to update
         target: url
         encode: true
         encodingscheme: urlencode
         urlpart: __flow__
     newflowname:
+        description: New flow name
         target: body
         format: jsondict
         key: name             
     disabled:
+        description: Enable / Disable the flow
         target: body
         format: jsondict
         key: disabled
@@ -51,6 +55,7 @@ params:
 #target:querystring, header
             target: querystring
             querystring: q
+            description:  API Key for accessing
 #output configuration
 outputmap:
     id:
@@ -58,7 +63,9 @@ outputmap:
         source: body
         type: json
         value: $.id
+        description:  ID of the flow that was updated
     parameterized_name: 
+        description:  Parametrized name of the updated Flow
         transform: strfmt
         source: body
         type: json

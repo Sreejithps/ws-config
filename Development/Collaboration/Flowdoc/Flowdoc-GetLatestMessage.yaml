@@ -19,26 +19,31 @@ inputmap:
         encode: true
         encodingscheme: urlencode
         urlpart: __organization__
+        description:  Organization name
     flowname:
         target: url
         encode: true
         encodingscheme: urlencode
         urlpart: __flow__
+        description:  Flow name
     event:
         target: body
         format: jsondict
         key: event  
-        default: message           
+        default: message
+        description:  Type of event
     limit:
         target: body
         format: jsondict
         key: limit
         default: 1
+        description:  Numer of messages to retrieve
     sort:
         target: body
         format: jsondict
         key: sort
         default: desc
+        description:  Sort order - asc, desc
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
@@ -59,6 +64,7 @@ params:
 #target:querystring, header
         target: querystring
         querystring: q
+        description:  API Key for accessig the services
 #output configuration
 outputmap:
     id:
@@ -66,3 +72,4 @@ outputmap:
         source: body
         type: json
         value: $[*].id
+        description:  ID of the new message

@@ -21,6 +21,7 @@ authentication:
             target: header
             header: Authorization
             value: Basic {}
+            description:  API Key for accessig the services
 #API parameters
 params:
     apikey:
@@ -34,13 +35,16 @@ outputmap:
         source: body
         type: json
         value: $[*].id
+        description:  ID list of organizations
     name:
         transform: none
         source: body
         type: json
         value: $[*].name
+        description:  Name of organizations
     parameterized_name:
         transform: none
         source: body
         type: json
         value: $[*].parameterized_name
+        description:  Parametrized name of organizations

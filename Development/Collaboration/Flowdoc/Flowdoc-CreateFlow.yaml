@@ -17,12 +17,14 @@ inputmap:
         encode: true
         encodingscheme: urlencode
         urlpart: __organization__
+        description:  Parametrized organization name
     flowname:
         target: body
         encode: true
         encodingscheme: urlencode
         format: jsondict
         key: name
+        description:  New flow name
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
@@ -43,6 +45,7 @@ params:
 #target:querystring, header
         target: querystring
         querystring: q
+        description:  API Key for accessig the services
 #output configuration
 outputmap:
     id:

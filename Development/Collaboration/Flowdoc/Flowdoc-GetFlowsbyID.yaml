@@ -14,7 +14,8 @@ inputmap:
         target: querystring
         encode: true
         encodingscheme: urlencode
-        querystring: id     
+        querystring: id
+        description:  ID of the flow?
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
@@ -35,6 +36,7 @@ params:
 #target:querystring, header
         target: querystring
         querystring: q
+        description:  API Key for accessig the services
 #output configuration
 outputmap:
     id:
@@ -42,71 +44,59 @@ outputmap:
         source: body
         type: json
         value: $[*].id
+        description:  ID of the flow
     flowname:
         transform: none
         source: body
         type: json
         value: $[*].name
+        description:  Flow name
     parameterized_name:
         transform: none
         source: body
         type: json
         value: $[*].name
+        description:  Parametrized flow name
     email:
         transform: none
         source: body
         type: json
         value: $[*].email
+        description:  Email ID of flow admin
     description:
         transform: none
         source: body
         type: json
         value: $[*].description
+        description:  Description of the Flow
     url:
         transform: none
         source: body
         type: json
         value: $[*].url
-    web_url:
-        transform: none
-        source: body
-        type: json
-        value: $[*].web_url
+        description:  Link to Flow
     access_mode:
         transform: none
         source: body
         type: json
         value: $[*].access_mode
+        description:  Flow acess mode
     flow_admin:
         transform: none
         source: body
         type: json
         value: $[*].flow_admin
+        description:  Is current user Flow Admin?
     open:
         transform: none
         source: body
         type: json
         value: $[*].open
-    joined:
-        transform: strfmt
-        source: body
-        type: json
-        format: '{} joined on {}'
-        value: ['$[*].flow_admin', '$[*].joined']
-    last_message_id:
-        transform: strfmt
-        source: body
-        type: json
-        format: The last message id is {}
-        value: ['$[*].last_message_id']
-    last_message_at:
-        transform: none
-        source: body
-        type: json
-        value: $[*].last_message_at
+        description:  Is this flow open?
     clickable_link: 
         transform: strfmt
         source: body
         type: json
         format: <a href='{}'>{}</a>
         value: ['$[*].name', '$[*].web_url']
+        description:  Clickable link to Flow

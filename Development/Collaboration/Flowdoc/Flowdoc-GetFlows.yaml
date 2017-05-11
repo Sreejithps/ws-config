@@ -27,6 +27,7 @@ params:
 #target:querystring, header
         target: querystring
         querystring: q
+        description:  API Key for accessig the services
 #output configuration
 outputmap:
     id:
@@ -34,71 +35,16 @@ outputmap:
         source: body
         type: json
         value: $[*].id
+        description:  ID of the flow
     flowname:
         transform: none
         source: body
         type: json
         value: $[*].name
+        description:  Flow Name
     parameterized_name:
         transform: none
         source: body
         type: json
         value: $[*].name
-    email:
-        transform: none
-        source: body
-        type: json
-        value: $[*].email
-    description:
-        transform: none
-        source: body
-        type: json
-        value: $[*].description
-    url:
-        transform: none
-        source: body
-        type: json
-        value: $[*].url
-    web_url:
-        transform: none
-        source: body
-        type: json
-        value: $[*].web_url
-    access_mode:
-        transform: none
-        source: body
-        type: json
-        value: $[*].access_mode
-    flow_admin:
-        transform: none
-        source: body
-        type: json
-        value: $[*].flow_admin
-    open:
-        transform: none
-        source: body
-        type: json
-        value: $[*].open
-    joined:
-        transform: strfmt
-        source: body
-        type: json
-        format: '{} has last message on {}'
-        value: ['$[*].name', '$[*].last_message_at']
-    last_message_id:
-        transform: strfmt
-        source: body
-        type: json
-        format: The last message id is {}
-        value: ['$[*].last_message_id']
-    last_message_at:
-        transform: none
-        source: body
-        type: json
-        value: $[*].last_message_at
-    clickable_link: 
-        transform: strfmt
-        source: body
-        type: json
-        format: <a href='{}'>{}</a>
-        value: ['$[*].name', '$[*].web_url']
+        description:  Parametrized Flow name
