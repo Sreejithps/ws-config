@@ -34,6 +34,7 @@ authentication:
 params:
 #output configuration
     apikey:
+        description: API Key for accessing services
 outputmap:
     profile:
         transform: strfmt
@@ -41,3 +42,4 @@ outputmap:
         type: json
         format: '{} link to image {}'
         value: ['$.items[*].displayName' , '$.items[*].image.url']
+        description: Clickable link to profile picture
