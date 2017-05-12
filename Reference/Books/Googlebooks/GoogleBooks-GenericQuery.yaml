@@ -51,4 +51,4 @@ outputmap:
         type: json
         format: '{} by {}'
         value: ['$.items[*].volumeInfo.title', '$.items[*].volumeInfo.authors[0]']
-        description: Formatted title of books
+        description: Formatted title
