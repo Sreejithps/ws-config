@@ -17,6 +17,7 @@ inputmap:
         encode: true
         encodingscheme: urlencode
         querystring: query
+        description: Location to query
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
