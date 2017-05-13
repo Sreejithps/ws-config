@@ -50,6 +50,7 @@ params:
         description: Client secret
 outputmap:
     venue:
+        description: Formatted venue details
         transform: strfmt
         source: body
         type: json
