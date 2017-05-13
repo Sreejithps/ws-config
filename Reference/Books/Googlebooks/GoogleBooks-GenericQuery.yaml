@@ -1,5 +1,5 @@
 #web services configuration file
-description: 'Do a book search on Google books 7'
+description: 'Do a book search on Google books 8'
 provider: https://www.googleapis.com/books
 providerapiversion: v1
 version: 'cb45c0ca-2b10-11e7-b154-d8fc93e70d32'
