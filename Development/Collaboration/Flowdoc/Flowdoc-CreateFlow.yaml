@@ -1,4 +1,5 @@
 #web services configuration file
+type: simple
 description: 'Create a new Flow'
 provider: https://www.flowdock.com
 endpoint:
