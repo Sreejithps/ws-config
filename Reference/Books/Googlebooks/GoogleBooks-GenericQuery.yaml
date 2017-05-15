@@ -26,7 +26,6 @@ inputmap:
         encode: false
         querystring: maxResults
         default: 1
-        description:  Maximum number of results
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
