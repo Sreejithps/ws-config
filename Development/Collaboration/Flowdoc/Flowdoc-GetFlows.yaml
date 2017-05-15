@@ -1,6 +1,5 @@
 #web services configuration file
-type: simple
-description: 'Get all flows'
+description: 'Get all flows for the orgamizaiton.  The list of organizations returned will be within the scope of APIkey'
 provider: https://www.flowdock.com
 endpoint:
     url: https://api.flowdock.com/flows
