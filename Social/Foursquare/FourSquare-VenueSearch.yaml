@@ -51,9 +51,9 @@ params:
         description: Client secret
 outputmap:
     venue:
+        description: Formatted venue details
         transform: strfmt
         source: body
         type: json
         format: '{} ({})'
-        value: ['$.response.venu
-        es[*].name' , '$.response.venues[*].contact.formattedPhone']
+        value: ['$.response.venues[*].name' , '$.response.venues[*].contact.formattedPhone']
