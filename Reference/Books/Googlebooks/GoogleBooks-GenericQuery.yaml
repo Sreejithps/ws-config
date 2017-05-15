@@ -1,6 +1,5 @@
 #web services configuration file
 provider: https://www.googleapis.com/books
-description: 'Do a book search on Google books 12'
 providerapiversion: v1
 version: 'cb45c0ca-2b10-11e7-b154-d8fc93e70d32'
 endpoint:
@@ -26,6 +25,7 @@ inputmap:
         encode: false
         querystring: maxResults
         default: 1
+        description:  Maximum number of results
 #authentication scheme: none, apikey, username/password
 authenticationscheme: apikey
 #apikey usage
