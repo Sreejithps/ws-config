@@ -3,7 +3,7 @@ type: simple
 description: 'Call current weather data for one location by city name'
 provider: http://openweathermap.org
 endpoint:
-    url: http://api.openweathermap.org/data/2.5/weather?mode=json
+    url: http://samples.openweathermap.org/data/2.5/forecast
 #rest, soap
     type: rest
 #method get, post, put, delete
@@ -37,7 +37,6 @@ inputmap:
         description: Name of the city to get weather information for
         
 outputmap:
-
     weatherforecast:
         transform: strfmt 
         source: body
