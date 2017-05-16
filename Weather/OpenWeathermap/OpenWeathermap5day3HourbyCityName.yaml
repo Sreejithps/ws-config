@@ -41,6 +41,6 @@ outputmap:
         transform: strfmt 
         source: body
         type: json
-        format: {} : {}
+        format: '{} : {}'
         value: ['$.list[*].dt_txt', '$.list[*].weather[0].description']
         description: 5 Day 3 hour forecast
