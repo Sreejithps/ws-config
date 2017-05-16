@@ -35,7 +35,13 @@ inputmap:
         encodingscheme: urlencode
         querystring: q
         description: Name of the city to get weather information for
-        
+    unit:
+        target: querystring
+        encode: true
+        encodingscheme: urlencode
+        querystring: units
+        default: metric
+        description: Units of measurement. metric, imperial        
 outputmap:
     weatherforecast:
         transform: strfmt 
