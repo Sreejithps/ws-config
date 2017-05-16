@@ -49,3 +49,15 @@ outputmap:
         type: json
         value: $.main.pressure
         description: Pressure
+    weathertext:
+        transform: none 
+        source: body
+        type: json
+        value: $.weather[0].description
+        description: Short weather text
+    humidity:
+        transform: none 
+        source: body
+        type: json
+        value: $.main.humidity
+        description: Humidity in grams per cubic meter        
